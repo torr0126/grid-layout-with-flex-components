@@ -3,10 +3,12 @@ body {
     color: #222;
   }
   
+
   .emoji {
     border: 1px solid #222;
     border-radius: 8px;
     padding: 1rem;
+    
   }
   
   .emoji h2 {
@@ -20,9 +22,35 @@ body {
     color: white;
     padding: 1rem;
     border-radius: 8px;
-  }
+    }
   
   .icon {
     font-size: 4rem;
   }
-  ```
+
+  /*adding grid property to layout the emoji cards*/
+
+  .emojis {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap:20px;
+  }
+
+  /*Addign property flex to layout the content of cards*/
+
+  .emoji {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  
+  .icon {
+   align-self:center;
+   order: -1;
+  }
+
+
+ 
+  
